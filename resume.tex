@@ -68,17 +68,22 @@
 \triline{\textbf{Senior Software Engineer}}{Google, C++ Toolchain Team}{2019-present}
 
 \begin{itemize}[nosep]
-\item Brought up new ARM cross-build toolchains in the Bazel build system for
-      C++ and Go. Built a QEMU-based emulated test environment to allow for
-      cross-architecture testing of client team software.
-\item Worked across a variety of toolchain components including: glibc,
-      LLVM (Clang driver, LLD), and the Go and Python runtimes.
+\item Brought up new ARM cross-compiling toolchains in the Bazel build system
+      for C++ and Go. Built a QEMU ``user'' mode based emulated test environment.
+      Enabled performant, continuous, cross-architecture testing of over
+      10,000 client team binaries on existing test infrastructure.
+\item Triaged failures in client team binaries, and submitted fixes  across a
+      variety of toolchain components including: glibc, LLVM (Clang driver,
+      LLD), and the Go and Python runtimes.
 \item Subject matter expert for emulator $\leftrightarrow$ Linux interaction.
-      Implemented \verb|CLONE_VM| support in QEMU to decrease flakiness in
-      client team tests. Wrote a data analysis pipeline to measure flake
-      rates of guest code.
+      Root caused several reports of flaky tests from client teams to a subtly
+      incorrect implementation of \verb|fork(2)| in QEMU user mode. Implemented
+      \verb|CLONE_VM| support in QEMU to work around this issue. Decreased
+      flakiness in client team tests. Wrote a data analysis pipeline to measure
+      flake rates of guest code to drive further work.
 \item Participated in a company-wide code review mentorship program. Reviewed 
-      Go code across 100s of projects.
+      Go code across 100s of projects by 100s of authors. Equivalent to
+      mentoring $\approx 8$ authors from start to finish.
 \end{itemize}
 \vspace{\listpostvertical}
 
@@ -89,7 +94,7 @@
       availability service. Participated in 5m-response oncall rotation, and
       release roles.
 \item Led a project to develop a new automated configuration push service for
-      the control pane software controller in Go. Executed a migration from
+      the control plane software controller in Go. Executed a migration from
       the legacy system to the new system without downtime. Defined meaningful
       service level indicators (SLIs) and objectives (SLOs) based on client
       team needs. Developed monitoring and alerting for the push service.
@@ -148,9 +153,8 @@
           Typed Python, Bash, SQL, Version Control (git/Mercurial), Bazel,
           Docker, Linux, LLVM-based Toolchains, Crossbuilding, Software
           Emulation, Monitoring and Alerting, Software Defined Networking
-          (SDN).
+          (SDN), Distributed Systems.
     \item \textbf{Some Experience With:} Functional Programming
-          (Haskell, OCaml, Scheme, etc.), R, Rust, TypeScript, Java, React,
-          Distributed Systems.
+          (Haskell, OCaml, Scheme, etc.), R, Rust, TypeScript, Java, React.
 \end{trivlist}
 \end{document}
